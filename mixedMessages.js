@@ -1,12 +1,14 @@
 
 //assign list of quotes to an array. 
-let quotesList = ["I'm not looking for another as I wander in my time, walk me to the corner, our steps will always rhyme - Leonard Cohen, Hey that;s no wy to say goodbye", "There were three of us this morning, I'm the only one this evening, but I must go on. - Leonard Cohen, The Partisan"];
+let quotesList1 = ["Never gonna give you up, ", "We're up all night to have fun, ", "If they move too quick, "];
+let quotesList2 = ["never gonna let you down, ", "we're up all night for good fun, ", "oh, ey, oh, "];
+let quotesList3 = ["never gonna run around and desert you", "we're up all night to get lucky", "they falling down like a domino"];
 
 
-function selectQuote(){
-	return(Math.floor(Math.random()*quotesList.length));
+function selectQuote(array){
+	return(array[Math.floor(Math.random()*array.length)]);
 }
 
-let returnedQuote = quotesList[selectQuote()];
+let returnedQuote = selectQuote(quotesList1) + selectQuote(quotesList2) + selectQuote(quotesList3);
 
 console.log(returnedQuote);
